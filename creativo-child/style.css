@@ -1,0 +1,122 @@
+/*
+Theme Name: Creativo Child
+Template: creativo
+Description: Creativo Child Theme.
+Author: RockyThemes
+Theme URI: http://rockythemes.com/creativo/
+Author URI: http://rockythemes.com
+Version: 99
+License: GNU General Public License
+License URI: license.txt
+*/
+
+/*Ensure Testimonial text lines up with 'About' text on home page.*/
+.test_home .review div .comment_quote {
+	padding-top: 0;
+}
+
+
+/*Add What's App icon to top bar.*/
+.top_contact .contact_phone {
+	padding-left: 40px;
+}
+.top_contact .contact_phone:before {
+	content: "\f232";
+	position: absolute;
+	font-family: fontawesome;
+	left: 15px;
+}
+
+/*Add What's App icon to footer.*/
+.footer_widget div .contact .phone::before {
+	content: "\f232";
+	font-family: fontawesome;
+	font-size: 20px;
+	height: 20px;
+}
+.contact ul li {
+	padding:0;
+}
+.contact ul li i {
+	position:relative;
+}
+.footer_widget div .contact .email::before {/*Add this to keep the phone and email lines aligned properly.*/
+	content: "\f232";
+	font-family: fontawesome;
+	font-size: 20px;
+	height: 20px;
+	visibility: hidden;
+}
+
+/*Edit social icons on Contact page.*/
+.social_links i {
+	font-size: 30px;
+}
+.social_links > a {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+/*On Contact page, hide one email icon, so items align properly.*/
+.hide {
+	visibility: hidden;
+}
+
+/*In footer, ensure phone icon matches the rest of the site.*/
+.footer_widget .footer_widget_content:nth-child(4) li.phone i::before {
+	content: "\f095";
+	font-size: 20px;
+}
+
+/*Fixes the 'out of stock' overlay on shop elements.*/
+.product .badge.out-of-stock-badge {
+	width:90px;
+	height: 30px;
+	background-color: #fff;
+}
+
+/*Adds vertical padding between gallery image thumbnails.*/
+.woocommerce #container div.product div.images .flex-control-thumbs li {
+	margin-bottom: 5px !important;
+}
+
+/*Fix bullet points on footer list.*/
+.product-categories {
+	position: relative;
+}
+
+/*Edit font on category pages.*/
+.woocommerce-result-count {
+	font-size: 16px;
+	color:#283891;
+}
+.term-description p {
+	font-size: 18px;
+	color:#283891;
+	font-weight: bold;
+}
+
+/*CSS to ensure 'Availability' section is correctly displayed on variable products.*/
+.woocommerce-variation.single_variation {
+    border-top: 1px solid #f2f2f2;
+}
+.single_variation_wrap .woocommerce-variation-price {
+    padding:10px 0;
+    display:inline-block;
+}
+.single_variation_wrap .woocommerce-variation-availability {
+    display: inline-block;
+    margin-left:10px;
+}
+.woocommerce.single-product .single_variation_wrap .woocommerce-variation-availability .stock {
+    display: initial;
+    font-weight: 600;
+    margin-bottom:0;
+}
+.single_variation_wrap .woocommerce-variation-availability .out-of-stock {    
+    color: red;
+}
+.single-product .cart .button.wc-variation-is-unavailable {
+    opacity:0.2;
+    cursor:not-allowed;
+}
